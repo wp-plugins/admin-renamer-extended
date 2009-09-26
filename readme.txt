@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Admin renamer extended ===
 Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
 Tags: admin,admins,rename,founder,change,user,users
