@@ -86,7 +86,6 @@ if (count($_POST)) {
                  <input type="hidden" name="plugin_admin_renamer-oldname<?php echo $row->ID; ?>" id="plugin_admin_renamer-newCat" class="plugin_admin_renamer-ip-box" value="<?php echo $row->user_login; ?>"/>
                  <input type="text" name="plugin_admin_renamer-newname<?php echo $row->ID; ?>" id="plugin_admin_renamer-newCat" class="plugin_admin_renamer-ip-box" value="<?php echo $row->user_login; ?>"/>
                </label>
-               <input type="hidden" name="plugin_admin_renamer-catId" id="plugin_admin_renamer-catId" value="0" />
                </div>
                <div class="plugin_admin_renamer-box01"> 
                <input type="submit" name="button" value="Update" style="margin-top: 2px;" />

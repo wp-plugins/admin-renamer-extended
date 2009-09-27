@@ -15,7 +15,7 @@
  * Displays the admin page
  */
 function plugin_admin_renamer_initpage() {
-   if (isset ($_GET['page']) && $_GET['page'] == 'admin_renamer_extended/admin.php') {
+   if (isset ($_GET['page']) && $_GET['page'] == 'admin_renamer_extended/admin.php' || $_GET['page'] == 'admin-renamer-extended/admin.php') {
       require_once PLUGIN_ADMIN_RENAMER_DIR . '/form.php';
    }
 }
@@ -24,7 +24,7 @@ function plugin_admin_renamer_initpage() {
  * Additional links on the plugin page
  */
 function plugin_admin_renamer_RegisterPluginLinks($links, $file) {
-   if ($file == 'admin_renamer_extended/admin_renamer.php') {
+   if ($file == 'admin_renamer_extended/admin_renamer.php' || $file == 'admin-renamer-extended/admin.php') {
       $links[] = '<a href="plugins.php?page=admin_renamer_extended/admin.php">' . __('Settings') . '</a>';
       $links[] = '<a href="http://donate.ramonfincken.com">' . __('Donate') . '</a>';
    }
