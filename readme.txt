@@ -33,4 +33,5 @@ Tidying of html code, added screenshots
 
 == Screenshots ==
 
-
+http://plugins.svn.wordpress.org/admin-renamer-extended/trunk/screenshot_before.png
+http://plugins.svn.wordpress.org/admin-renamer-extended/trunk/screenshot_after.png
