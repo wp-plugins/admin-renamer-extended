@@ -1,7 +1,7 @@
 === Admin renamer extended ===
 Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
-Tags: admin,admins,rename,founder,change,user,users
+Tags: admin,admins,rename,founder,change,user,users,renamer,extended
 Requires at least: 2.0.2
 Tested up to: 2.8.4
 Stable tag: 1.2
@@ -33,5 +33,5 @@ Tidying of html code, added screenshots
 
 == Screenshots ==
 
-<img src="http://plugins.svn.wordpress.org/admin-renamer-extended/trunk/screenshot_before.png"/>
-<img src="http://plugins.svn.wordpress.org/admin-renamer-extended/trunk/screenshot_after.png"/>
+1. Before rename
+2. After rename
