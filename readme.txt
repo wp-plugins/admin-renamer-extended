@@ -34,15 +34,8 @@ Tidying of html code, added screenshots
 = 1.3 =
 Applied WP way of handling usernames:
 
-if (empty ($newName)) {
-      $message = stripslashes($oldName) . ' NOT changed-> New name was empty!';
-      $showMsg = 'block';
-   } else {
-      if (!validate_username($newName)) {
-         $message = stripslashes($oldName) . ' NOT changed -> This username is invalid. Please enter a valid username.';
-         $showMsg = 'block';
-      }
-      [rest of code]
+(!validate_username($newName)) 
+
 
 == Screenshots ==
 
