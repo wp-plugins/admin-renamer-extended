@@ -9,7 +9,7 @@
  * @package    Plugins
  * @author        Ramon Fincken <>
  * @copyright     Yes, Open source, WebsiteFreelancers.nl
- * @version       v 1.0  26-09-2009 Ramon$
+ * @version       v 1.3  26-09-2009 Ramon$
 */
 global $wpdb, $current_user;
 
@@ -99,7 +99,7 @@ foreach ($users AS $row) {
                  <input type="text" name="plugin_admin_renamer-newname<?php echo $row->ID; ?>" id="plugin_admin_renamer-newCat" class="plugin_admin_renamer-ip-box" value="<?php echo $row->user_login; ?>"/>
                </label>
                </div>
-               <div class="plugin_admin_renamer-box01"> 
+               <div class="plugin_admin_renamer-box01">
                <input type="submit" name="button" value="Update" style="margin-top: 2px;" />
                </div>
              </form>
