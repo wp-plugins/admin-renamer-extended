@@ -2,7 +2,7 @@
 /*
 Plugin Name: Admin renamer extended
 Plugin URI: http://www.websitefreelancers.nl
-Description: Lets you rename all admin usernames
+Description: Lets you rename all admin usernames.
 Version: 1.3
 Author: Ramon Fincken
 Author URI: http://www.websitefreelancers.nl
@@ -20,6 +20,4 @@ if (!defined('PLUGIN_ADMIN_RENAMER_BASENAME')) {
 if (is_admin()) {
    require_once PLUGIN_ADMIN_RENAMER_DIR . '/admin.php';
 }
-
-// require_once PLUGIN_ADMIN_RENAMER_DIR . '/langconst.php';
 ?>
