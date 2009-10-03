@@ -4,7 +4,7 @@ Donate link: http://donate.ramonfincken.com
 Tags: admin,admins,rename,founder,change,user,users,renamer,extended
 Requires at least: 2.0.2
 Tested up to: 2.8.4
-Stable tag: 1.3
+Stable tag: 1.4
 
 Plugin to change your default admin username ( with GUI to change all other admin names too ).
 
@@ -32,10 +32,10 @@ First release
 Tidying of html code, added screenshots
 
 = 1.3 =
-Applied WP way of handling usernames:
+Applied WP way of handling usernames
 
-(!validate_username($newName)) 
-
+= 1.4 =
+Same as 1.3 Commit error so scipped 1 version
 
 == Screenshots ==
 
