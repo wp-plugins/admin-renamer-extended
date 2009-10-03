@@ -5,10 +5,10 @@
  * Managing the worpress additonal admin renamer extended operations.
  *
  * @category      Wordpress Plugins
- * @package    Plugins
+ * @package       Plugins
  * @author        Ramon Fincken <>
  * @copyright     Yes, Open source, WebsiteFreelancers.nl
- * @version       v 1.0  26-09-2009 Ramon$
+ * @version       v 1.3  26-09-2009 Ramon$
 */
 
 /**
