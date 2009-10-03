@@ -5,7 +5,7 @@
  * Managing the worpress additonal admin renamer extended operations.
  *
  * @category      Wordpress Plugins
- * @package    Plugins
+ * @package       Plugins
  * @author        Ramon Fincken <>
  * @copyright     Yes, Open source, WebsiteFreelancers.nl
  * @version       v 1.3  26-09-2009 Ramon$
@@ -15,7 +15,7 @@
  * Displays the admin page
  */
 function plugin_admin_renamer_initpage() {
-   if (isset ($_GET['page']) && $_GET['page'] == 'admin_renamer_extended/admin.php' || $_GET['page'] == 'admin-renamer-extended/admin.php') {
+   if (isset ($_GET['page']) && ($_GET['page'] == 'admin_renamer_extended/admin.php' || $_GET['page'] == 'admin-renamer-extended/admin.php')) {
       require_once PLUGIN_ADMIN_RENAMER_DIR . '/form.php';
    }
 }
@@ -50,17 +50,6 @@ function plugin_admin_renamerdoelgrp_css() {
    echo '<link rel="stylesheet" href="' . $admin_stylesheet_url . '" type="text/css" />';
 }
 add_action('admin_head', 'plugin_admin_renamerdoelgrp_css');
-
-/**
- * Adding the javascript required for plugin
- *
- */
-function plugin_admin_renamer_printScripts() {
-   wp_enqueue_script('plugin_admin_renamer_js', plugin_admin_renamer_plugin_url('js.js'), array (
-      'jquery'
-   ));
-}
-// add_action('wp_print_scripts', 'plugin_admin_renamer_printScripts');
 
 /**
  * Generating the url for current Plugin

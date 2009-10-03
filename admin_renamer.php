@@ -20,6 +20,4 @@ if (!defined('PLUGIN_ADMIN_RENAMER_BASENAME')) {
 if (is_admin()) {
    require_once PLUGIN_ADMIN_RENAMER_DIR . '/admin.php';
 }
-
-// require_once PLUGIN_ADMIN_RENAMER_DIR . '/langconst.php';
 ?>

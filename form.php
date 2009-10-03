@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Admin renamer extended operations.
  *
