@@ -2,7 +2,7 @@
 /*
 Plugin Name: Admin renamer extended
 Plugin URI: http://www.websitefreelancers.nl
-Description: Lets you rename all admin usernames.
+Description: Lets you rename all admin usernames with GUI.
 Version: 1.3
 Author: Ramon Fincken
 Author URI: http://www.websitefreelancers.nl

@@ -45,11 +45,11 @@ add_action('admin_menu', 'plugin_admin_renamer_addMenu');
 /**
  * Loading the CSS file
  */
-function plugin_admin_renamerdoelgrp_css() {
+function plugin_admin_renamer_css() {
    $admin_stylesheet_url = plugin_admin_renamer_plugin_url('styles/style.css');
    echo '<link rel="stylesheet" href="' . $admin_stylesheet_url . '" type="text/css" />';
 }
-add_action('admin_head', 'plugin_admin_renamerdoelgrp_css');
+add_action('admin_head', 'plugin_admin_renamer_css');
 
 /**
  * Generating the url for current Plugin
