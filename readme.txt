@@ -1,7 +1,7 @@
 === Admin renamer extended ===
 Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
-Tags: admin,admins,rename,founder,change,user,users,renamer,extended
+Tags: admin,admins,rename,founder,change,user,users,renamer,extended,username
 Requires at least: 2.0.2
 Tested up to: 2.8.6
 Stable tag: 1.5
