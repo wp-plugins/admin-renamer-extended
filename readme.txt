@@ -11,6 +11,10 @@ Plugin to change your default admin username ( with GUI to change all other admi
 == Description ==
 
 Plugin to change your default admin username ( with GUI to change all other admin names too ).
+Will check for:
+* Empty names
+* Existing usernames
+* Valid username ( no funky special characters )
 
 == Installation ==
 
