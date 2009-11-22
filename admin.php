@@ -8,8 +8,9 @@
  * @package       Plugins
  * @author        Ramon Fincken <>
  * @copyright     Yes, Open source, WebsiteFreelancers.nl
- * @version       v 1.4  26-09-2009 Ramon$
+ * @version       v 1.5  22-11-2009 Ramon$
 */
+if (!defined('ABSPATH')) die("Aren't you supposed to come here via WP-Admin?");
 
 /**
  * Displays the admin page
@@ -24,9 +25,10 @@ function plugin_admin_renamer_initpage() {
  * Additional links on the plugin page
  */
 function plugin_admin_renamer_RegisterPluginLinks($links, $file) {
-   if ($file == 'admin_renamer_extended/admin_renamer.php' || $file == 'admin-renamer-extended/admin.php') {
-      $links[] = '<a href="plugins.php?page=admin_renamer_extended/admin.php">' . __('Settings') . '</a>';
+   if ($file == 'admin-renamer-extended/admin_renamer.php') {
+      $links[] = '<a href="plugins.php?page=admin-renamer-extended/admin.php">' . __('Settings') . '</a>';
       $links[] = '<a href="http://donate.ramonfincken.com">' . __('Donate') . '</a>';
+      $links[] = '<a href="http://www.creativepulses.nl">' . __('Custom WordPress coding nodig?') . '</a>';
    }
    return $links;
 }
