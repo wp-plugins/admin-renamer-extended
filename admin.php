@@ -28,7 +28,7 @@ function plugin_admin_renamer_RegisterPluginLinks($links, $file) {
    if ($file == 'admin-renamer-extended/admin_renamer.php') {
       $links[] = '<a href="plugins.php?page=admin-renamer-extended/admin.php">' . __('Settings') . '</a>';
       $links[] = '<a href="http://donate.ramonfincken.com">' . __('Donate') . '</a>';
-      $links[] = '<a href="http://www.creativepulses.nl">' . __('Custom WordPress coding nodig?') . '</a>';
+      $links[] = '<a href="http://www.creativepulses.nl/scripting/wordpress">' . __('Custom WordPress coding nodig?') . '</a>';
    }
    return $links;
 }
