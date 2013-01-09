@@ -2,9 +2,9 @@
 Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
 Tags: admin,admins,rename,founder,change,user,users,renamer,extended,username
-Requires at least: 2.0.2
-Tested up to: 3.0.1
-Stable tag: 1.5
+Requires at least: 3.0
+Tested up to: 3.5
+Stable tag: 2.0
 
 Plugin to change your default admin username ( with GUI to change all other admin names too ).
 
@@ -24,10 +24,18 @@ Will check for:
 
 == Frequently Asked Questions ==
 
-None available
+= I have a lot of questions and I want support where can I go? =
+
+<a href="http://pluginsupport.mijnpress.nl/">http://pluginsupport.mijnpress.nl/</a> or drop me a tweet to notify me of your support topic over here.<br>
+I always check my tweets, so mention my name with @ramonfincken and your problem.
 
 
 == Changelog ==
+
+= 2.0 =
+Changed: WP standards used to get all admins<br>
+Added: Extra security check based on 'remove_users' capabilities
+
 
 = 1.1 =
 First release

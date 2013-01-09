@@ -8,13 +8,17 @@
  * @package    Plugins
  * @author        Ramon Fincken <>
  * @copyright     Yes, Open source, WebsiteFreelancers.nl
- * @version       v 1.5  22-11-2009 Ramon$
 */
 if (!defined('ABSPATH')) die("Aren't you supposed to come here via WP-Admin?");
 global $wpdb, $current_user;
 
 $message = null;
 $showMsg = 'none';
+
+if(!current_user_can('remove_users'))
+{
+	wp_die('No permission to change usernames','You are not allowed to do this');
+}
 
 /**
  * If submiting the form
@@ -74,9 +78,7 @@ if (count($_POST)) {
          </div>
         </div>
 <?php
-
-$user_query = "SELECT user_id, user_id AS ID, user_login, display_name, user_email, meta_value FROM $wpdb->users, $wpdb->usermeta WHERE {$wpdb->users}.ID = {$wpdb->usermeta}.user_id AND meta_key = '{$wpdb->prefix}capabilities' AND (ID = 1 OR user_login = 'admin' OR meta_value LIKE('%administrator%')) ORDER BY ID ASC";
-$users = $wpdb->get_results($user_query);
+$users = get_users('role=administrator');
 foreach ($users AS $row) {
 ?>        <div class="plugin_admin_renamer-formarea-outer">
            <div class="plugin_admin_renamer-formarea">

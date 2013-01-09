@@ -8,7 +8,6 @@
  * @package       Plugins
  * @author        Ramon Fincken <>
  * @copyright     Yes, Open source, WebsiteFreelancers.nl
- * @version       v 1.5  22-11-2009 Ramon$
 */
 if (!defined('ABSPATH')) die("Aren't you supposed to come here via WP-Admin?");
 
