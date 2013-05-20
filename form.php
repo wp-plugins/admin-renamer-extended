@@ -47,6 +47,27 @@ if (count($_POST)) {
          } else {
             $user_query = "UPDATE $wpdb->users SET user_login = '" . mysql_real_escape_string(stripslashes($newName)) . "' WHERE {$wpdb->users}.ID = " . intval($_GET['user_id']) . " LIMIT 1";
             $wpdb->get_results($user_query);
+
+
+		if(is_multisite())
+		{
+			$network_site_admins = get_site_option('site_admins');
+
+			$key = 0;
+			foreach($network_site_admins as $val)
+			{
+				if($val == mysql_real_escape_string(stripslashes($oldName)))
+				{
+					// Update
+					$network_site_admins[$key] = mysql_real_escape_string(stripslashes($newName));
+					// Only if found .. should have one hit
+					update_site_option('site_admins',$network_site_admins);
+				}
+				$key++;
+			}
+		}
+
+
             $message = 'Changed ' . stripslashes($oldName) . ' into ' . stripslashes($newName);
             $showMsg = 'block';
 

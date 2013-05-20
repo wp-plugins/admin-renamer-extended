@@ -3,15 +3,16 @@ Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
 Tags: admin,admins,rename,founder,change,user,users,renamer,extended,username
 Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 2.0
+Tested up to: 3.5.1
+Stable tag: 3.0
 
 Plugin to change your default admin username ( with GUI to change all other admin names too ).
 
 == Description ==
 
-Plugin to change your default admin username ( with GUI to change all other admin names too ).
-Will check for:
+Plugin to change your default admin username ( with GUI to change all other admin names too ).<br>
+Tested on multisite<br>
+Will check for:<br>
 * Empty names
 * Existing usernames
 * Valid username ( no funky special characters )
@@ -32,10 +33,12 @@ I always check my tweets, so mention my name with @ramonfincken and your problem
 
 == Changelog ==
 
+= 3.0 =
+Added: Multisite support. Thanks to Peter Luit for reporting!
+
 = 2.0 =
 Changed: WP standards used to get all admins<br>
 Added: Extra security check based on 'remove_users' capabilities
-
 
 = 1.1 =
 First release
