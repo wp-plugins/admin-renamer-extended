@@ -3,7 +3,7 @@ Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
 Tags: admin,admins,rename,founder,change,user,users,renamer,extended,username
 Requires at least: 3.0
-Tested up to: 3.5.1
+Tested up to: 3.8.1
 Stable tag: 3.0
 
 Plugin to change your default admin username ( with GUI to change all other admin names too ).
