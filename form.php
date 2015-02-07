@@ -45,31 +45,46 @@ if (count($_POST)) {
             $message = stripslashes($oldName) . ' NOT changed -> This username is already registered. Please choose another one.';
             $showMsg = 'block';
          } else {
-            $user_query = "UPDATE $wpdb->users SET user_login = '" . mysql_real_escape_string(stripslashes($newName)) . "' WHERE {$wpdb->users}.ID = " . intval($_GET['user_id']) . " LIMIT 1";
-            $wpdb->get_results($user_query);
 
-
-		if(is_multisite())
-		{
-			$network_site_admins = get_site_option('site_admins');
-
-			$key = 0;
-			foreach($network_site_admins as $val)
-			{
-				if($val == mysql_real_escape_string(stripslashes($oldName)))
-				{
-					// Update
-					$network_site_admins[$key] = mysql_real_escape_string(stripslashes($newName));
-					// Only if found .. should have one hit
-					update_site_option('site_admins',$network_site_admins);
-				}
-				$key++;
+		if(!function_exists('mysql_real_escape_string')) {
+			    $message = stripslashes($oldName) . ' NOT changed -> The new one cannot be stored due to non existing mysql_real_escape_string function';
+			    $showMsg = 'block';				
+		} else {
+			$test = trim(mysql_real_escape_string(stripslashes($newName)));
+			if(!$test || strlen($test) == 0) {
+			    $message = stripslashes($oldName) . ' NOT changed -> The new one cannot be stored due to mysql_real_escape_string';
+			    $showMsg = 'block';				
 			}
 		}
 
 
-            $message = 'Changed ' . stripslashes($oldName) . ' into ' . stripslashes($newName);
-            $showMsg = 'block';
+		if(!$message) {
+		    $user_query = "UPDATE $wpdb->users SET user_login = '" . mysql_real_escape_string(stripslashes($newName)) . "' WHERE {$wpdb->users}.ID = " . intval($_GET['user_id']) . " LIMIT 1";
+		    $wpdb->get_results($user_query);
+
+
+			if(is_multisite())
+			{
+				$network_site_admins = get_site_option('site_admins');
+
+				$key = 0;
+				foreach($network_site_admins as $val)
+				{
+					if($val == mysql_real_escape_string(stripslashes($oldName)))
+					{
+						// Update
+						$network_site_admins[$key] = mysql_real_escape_string(stripslashes($newName));
+						// Only if found .. should have one hit
+						update_site_option('site_admins',$network_site_admins);
+					}
+					$key++;
+				}
+			}
+
+
+		    $message = 'Changed ' . stripslashes($oldName) . ' into ' . stripslashes($newName);
+		    $showMsg = 'block';
+		}
 
          }
       }
